@@ -1,0 +1,50 @@
+@import "../../styles/main.scss";
+
+.user-postings-wrap {
+	margin: 175px 0 150px;
+
+	.user-postings-wrap-header {
+		display: flex;
+		flex-flow: row wrap;
+
+		&__item {
+			flex: 0 0 50%;
+
+			&:first-of-type {
+				h2 {
+					font-size: 28px;
+					font-weight: 300;
+					color: $header-color;
+				}
+			}
+
+			&:last-of-type {
+				text-align: right !important;
+			}
+		}
+	}
+}
+
+.postings-wrap {
+	margin-top: 25px;
+	h6 {
+		text-align: center;
+		color: $text-color;
+		font-weight: 300;
+		margin-top: 50px;
+		font-size: 15px;
+		a {
+			color: $yellow-color;
+			text-decoration: underline;
+			@include transition-1;
+			&:hover {
+				color: darken($yellow-color, 5%);
+			}
+		}
+	}
+}
+
+.publish-project-not-allowed {
+	cursor: not-allowed!important;
+	opacity: 0.5;
+}

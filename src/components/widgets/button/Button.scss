@@ -1,0 +1,60 @@
+@import "../../../styles/main.scss";
+
+.button {
+	font-size: 15px;
+	color: white;
+	background: $yellow-color;
+	border: 0;
+	cursor: pointer;
+	-webkit-box-shadow: -2px 7px 15px -9px rgba(176,176,176,1);
+	-moz-box-shadow: -2px 7px 15px -9px rgba(176,176,176,1);
+	box-shadow: -2px 7px 15px -9px rgba(176,176,176,1);
+	@include transition-2;
+	@include border-radius(4px);
+
+	&:hover {
+		-webkit-box-shadow: -2px 5px 15px -9px rgba(84,84,84,1);
+		-moz-box-shadow: -2px 5px 15px -9px rgba(84,84,84,1);
+		box-shadow: -2px 5px 15px -9px rgba(84,84,84,1);
+		background: darken($yellow-color, 4%);
+	}
+
+	&:disabled {
+		background: lightgray;
+		cursor: not-allowed;
+	}
+
+	&:focus, &:active {
+		outline: none;
+	}
+
+	span {
+		display: inline;
+		margin-left: 10px;
+		img {
+			width: 17px;
+			height: 17px;
+			display: inline-block;
+			position: relative;
+			top: -2px;
+			&.loader-inactive {
+				display: none;
+			}
+
+			&.loader-active {
+				display: inline-block;
+			}
+		}
+	}
+}
+
+.button-small {
+	padding: 5px 12px;
+}
+
+.button-medium {
+	padding: 9px 35px;
+	font-size: 17px;
+}
+
+

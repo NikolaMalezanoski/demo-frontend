@@ -1,0 +1,115 @@
+@import "../../../styles/main.scss";
+
+.input-error {
+	border-bottom: 2px solid red;
+}
+
+input {
+	font-size: 16px;
+	padding: 10px 0 5px;
+	text-indent: 5px;
+	display: block;
+	width: 100%;
+	border: none;
+	border-bottom: 1px solid #eaeaea;
+	font-weight: lighter;
+
+	&:focus {
+		outline: none;
+	}
+}
+
+label {
+	color: $text-color;
+	font-size: 16px;
+	font-weight: lighter;
+	position: absolute;
+	pointer-events: none;
+	left: 5px;
+	top: 5px;
+	transition: 0.2s ease all;
+	-moz-transition: 0.2s ease all;
+	-webkit-transition: 0.2s ease all;
+}
+
+input:focus ~ label, input:valid ~ label {
+	top: -20px;
+	font-size: 14px;
+	color: $yellow-color;
+}
+
+.bar {
+	position: relative;
+	display: block;
+	width: 100%;
+
+	&:after, &:before {
+		content: '';
+		height: 2px;
+		width: 0;
+		bottom: 1px;
+		position: absolute;
+		background: $yellow-color;
+		transition: 0.2s ease all;
+		-moz-transition: 0.2s ease all;
+		-webkit-transition: 0.2s ease all;
+	}
+
+	&:after {
+		right: 50%
+	}
+
+	&:before {
+		left: 50%;
+	}
+}
+
+input:focus ~ .bar:before, input:focus ~ .bar:after {
+	width: 50%;
+}
+
+.highlight {
+	position: absolute;
+	height: 60%;
+	width: 100px;
+	top: 25%;
+	left: 0;
+	pointer-events: none;
+	opacity: 0.5;
+}
+
+input:focus ~ .highlight {
+	-webkit-animation: inputHighlighter 0.3s ease;
+	-moz-animation: inputHighlighter 0.3s ease;
+	animation: inputHighlighter 0.3s ease;
+}
+
+@-webkit-keyframes inputHighlighter {
+	from {
+		background: #5264AE;
+	}
+	to {
+		width: 0;
+		background: transparent;
+	}
+}
+
+@-moz-keyframes inputHighlighter {
+	from {
+		background: #5264AE;
+	}
+	to {
+		width: 0;
+		background: transparent;
+	}
+}
+
+@keyframes inputHighlighter {
+	from {
+		background: #5264AE;
+	}
+	to {
+		width: 0;
+		background: transparent;
+	}
+}

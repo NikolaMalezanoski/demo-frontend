@@ -1,0 +1,107 @@
+@import "../../styles/main.scss";
+
+.auth-wrapper {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+
+	&__item {
+		flex: 0 0 50%;
+		position: relative;
+		height: 100vh;
+
+		.form-wrapper {
+			width: 40%;
+			position: relative;
+			top: 25%;
+			margin: 0 auto;
+
+			h3 {
+				font-weight: lighter;
+				margin-bottom: 45px;
+			}
+
+
+			[data-form="submit-button"] {
+				margin-top: 50px;
+				text-align: right;
+			}
+
+			@media(max-width: 1300px) {
+				width: 80%;
+			}
+
+			@media(max-width: 767px) {
+				width: 90%;
+			}
+		}
+
+		&:first-of-type {
+			background: white;
+			background-image: url("../../images/auth-majstorce-logo-yellow.svg");
+			background-repeat: no-repeat;
+			background-size: 30px 30px;
+			background-position: 15px 15px;
+
+			position: relative;
+
+			p {
+				position: absolute;
+				right: 25px;
+				bottom: 25px;
+				font-size: 13px;
+				text-align: center;
+				color: $text-color;
+				margin-top: 50px;
+
+				a {
+					color: $yellow-color;
+					text-decoration: underline;
+					@include transition-2;
+
+					&:hover {
+						color: darken($yellow-color, 7%);
+					}
+				}
+			}
+		}
+
+		&:last-of-type {
+			background: #f6f6f6;
+			background-image: url("../../images/auth-majstorce-white.png");
+			background-repeat: no-repeat;
+			background-size: 500px 500px;
+			background-position: bottom right;
+
+			div {
+				&:first-of-type {
+					width: 70%;
+					margin: 0 auto;
+					top: 43%;
+					position: relative;
+
+					p {
+						font-weight: 300;
+
+						span {
+							color: $yellow-color;
+						}
+					}
+				}
+			}
+		}
+
+		@media(max-width: 991px) {
+			flex: 0 0 100%;
+			height: 100%;
+			padding: 130px 0;
+		}
+	}
+}
+
+
+
+
+
+
+

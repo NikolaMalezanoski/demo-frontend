@@ -1,0 +1,159 @@
+* {
+	padding: 0;
+	margin: 0;
+	min-height: 0;
+	min-width: 0;
+}
+
+body {
+	font-size: 14px;
+	line-height: 1.6em;
+	font-family: 'Roboto', sans-serif;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+h1 {
+	font-size: 50px;
+	line-height: 1.2em;
+	@media(max-width: 991px) {
+		font-size: 35px;
+	}
+
+	@media(max-width: 767px) {
+		font-size: 27px;
+	}
+
+	@media(max-width: 479px) {
+		font-size: 22px;
+	}
+}
+
+h2 {
+	font-size: 35px;
+	line-height: 1.4em;
+
+	@media(max-width: 991px) {
+		font-size: 25px;
+	}
+
+	@media(max-width: 767px) {
+		font-size: 24px;
+		margin-bottom: 90px !important;
+	}
+
+	@media(max-width: 479px) {
+		font-size: 21px;
+		margin-bottom: 60px !important;
+	}
+}
+
+h3 {
+	font-size: 23px;
+	line-height: 1.3em;
+}
+
+h4 {
+	font-size: 18px;
+	line-height: 1.5em;
+
+	@media(max-width: 767px) {
+		font-size: 16px;
+	}
+
+	@media(max-width: 479px) {
+		font-size: 14px;
+	}
+}
+
+p {
+	font-size: 15px;
+}
+
+ol,
+ul {
+	list-style: none;
+}
+
+blockquote,
+q {
+	quotes: none;
+}
+
+a,
+a:hover {
+	text-decoration: none;
+	color: white;
+}
+
+::-webkit-scrollbar {
+	width: 10px;
+}
+
+::-webkit-scrollbar-track {
+	box-shadow: inset 0 0 5px grey;
+}
+
+::-webkit-scrollbar-thumb {
+	background: $yellow-color;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: $yellow-color;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.clearfix:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.clearfix:before {
+	display: table;
+	content: " ";
+}
+
+.section {
+	padding: 100px 0 100px;
+	text-align: center;
+
+	@media(max-width: 767px) {
+		padding: 75px 0 75px;
+	}
+}
+
+.form-group{
+	margin-bottom: 30px;
+	position: relative;
+}
+
+.container {
+	padding-right: 15px;
+	padding-left: 15px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+@media (min-width: 768px) {
+	.container {
+		width: 750px;
+	}
+}
+
+@media (min-width: 992px) {
+	.container {
+		width: 970px;
+	}
+}
+
+@media (min-width: 1200px) {
+	.container {
+		width: 1170px;
+	}
+}

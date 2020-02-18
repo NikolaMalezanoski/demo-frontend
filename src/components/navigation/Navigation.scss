@@ -1,0 +1,68 @@
+@import "../../styles/main.scss";
+
+.navbar-default {
+	display: flex;
+	flex-flow: row wrap;
+
+	div {
+		flex: 0 0 50%;
+		padding: 20px 0;
+
+		&:first-of-type {
+			img {
+				width: 235px;
+				height: 45px;
+			}
+		}
+
+		&:last-of-type {
+			text-align: right;
+			position: relative;
+			top: 15px;
+		}
+	}
+
+	.ant-dropdown-link {
+		color: $text-color;
+		font-size: 15px;
+		font-weight: 400;
+
+		i {
+			margin-left: 10px;
+		}
+	}
+}
+
+.ant-dropdown {
+	top: 75px !important;
+}
+
+.ant-dropdown-menu {
+	padding: 0!important;
+	@include border-radius(5px!important);
+	margin-top: 20px;
+
+	li {
+		border-bottom: 1px solid #f7f7f7;
+		text-align: right;
+		padding: 5px 20px;
+		&:last-of-type {
+			border: none;
+		}
+
+		&:hover {
+			background: transparent;
+		}
+
+		a {
+			@include transition-1;
+			padding: 10px 30px!important;
+			text-align: right !important;
+			font-size: 14px;
+			&:hover {
+				color: $yellow-color !important;
+				text-decoration: underline;
+			}
+		}
+	}
+}
